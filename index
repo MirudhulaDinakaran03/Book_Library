@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquil Book Haven 📚</title>
+    <style>
+        /* Overall Styling */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f9e6e6; /* Pale pink */
+            padding: 20px;
+            color: #5a3e36;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Centering Content */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Input Fields */
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d8a7b1;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            text-align: left;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            background-color: #f4b6c2;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e89da3;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: #fff5f7;
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #f4b6c2;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4b6c2;
+            color: white;
+        }
+
+        /* Headings */
+        h2, h3 {
+            font-weight: bold;
+            color: #7d4f50;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📚 Tranquil Book Heaven 📖</h2>
+        <input type="text" id="title" placeholder="📖 Book Title">
+        <input type="text" id="author" placeholder="✍️ Author">
+        <input type="text" id="genre" placeholder="📂 Genre">
+        <input type="number" id="year" placeholder="📅 Year">
+        <button onclick="addBook()">➕ Add Book</button>
+        
+        <h3>🔎 Filter Books</h3>
+        <input type="text" id="search" onkeyup="filterBooks()" placeholder="🔍 Search by Title, Author, Genre">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="bookList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
